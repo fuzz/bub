@@ -1,5 +1,5 @@
-# Revision history for beezlebub
+# Revision history for wu-wei
 
-## 0.1.0.0 -- YYYY-mm-dd
+## 0.1.0.0 -- 2019-08-15
 
-* First version. Released on an unsuspecting world.
+* Initial release of code split off from System.SymbolicLink.

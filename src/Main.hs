@@ -23,13 +23,13 @@ main = do
     h <- getHomeDirectory
     setCurrentDirectory h
 
-    d <- decodeFileEither ".bub" :: IO (Either ParseException [LinkPair])
+    d <- decodeFileEither ".pao" :: IO (Either ParseException [LinkPair])
 
     case d of
-        Left e -> putStrLn $ (show e) ++ "bub: Config file error--malformed YAML?"
+        Left e -> putStrLn $ (show e) ++ "pao: Config file error--malformed YAML?"
         Right lps -> do
             sequence $ [makeLink lp | lp <- lps]
-            putStrLn "bub: You have been LINKED!"
+            putStrLn "pao: You have been LINKED!"
 
 makeLink :: LinkPair -> IO ()
 makeLink lp = do
@@ -45,7 +45,7 @@ clobberIfSymbolicLink lp = do
         then do
             removeLink $ target lp
             createSymbolicLink (source lp) (target lp)
-        else putStrLn $ "bub: Refusing to clobber non-symlink " ++ target lp
+        else putStrLn $ "pao: Refusing to clobber non-symlink " ++ target lp
 
 data LinkPair = LinkPair {
       source :: FilePath
