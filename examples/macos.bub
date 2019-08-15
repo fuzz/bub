@@ -1,0 +1,87 @@
+-
+  target: .RData
+  source: cloud/dotfiles/.RData
+-
+  target: .Rhistory
+  source: cloud/dotfiles/.Rhistory
+-
+  target: .bash_history
+  source: cloud/dotfiles/.bash_history
+-
+  target: .bash_profile
+  source: cloud/dotfiles/.bash_profile
+-
+  target: .bub
+  source: cloud/dotfiles/.bub
+-
+  target: .cargo
+  source: cloud/dotfiles/.cargo
+-
+  target: .config
+  source: cloud/dotfiles/.config
+-
+  target: .emacs
+  source: cloud/dotfiles/.emacs
+-
+  target: .emacs.d
+  source: cloud/dotfiles/.emacs.d
+-
+  target: .ghc
+  source: cloud/dotfiles/.ghc
+-
+  target: .gitconfig
+  source: cloud/dotfiles/.gitconfig
+-
+  target: .git_template
+  source: cloud/dotfiles/.git_template
+-
+  target: .hoogle
+  source: cloud/dotfiles/.hoogle
+-
+  target: .ivy2
+  source: cloud/dotfiles/.ivy2
+-
+  target: .jupyter
+  source: cloud/dotfiles/.jupyter
+-
+  target: .keras
+  source: cloud/dotfiles/.keras
+-
+  target: .profile
+  source: cloud/dotfiles/.profile
+-
+  target: .rstudio-desktop
+  source: cloud/dotfiles/.rstudio-desktop
+-
+  target: .sbt
+  source: cloud/dotfiles/.sbt
+-
+  target: .scala_history
+  source: cloud/dotfiles/.scala-history
+-
+  target: .tlaplus
+  source: cloud/dotfiles/.tlaplus
+-
+  target: .tmux.conf
+  source: cloud/dotfiles/.tmux.conf
+-
+  target: .vim
+  source: cloud/dotfiles/.vim
+-
+  target: .viminfo
+  source: cloud/dotfiles/.viminfo
+-
+  target: .vimrc
+  source: cloud/dotfiles/.vimrc
+-
+  target: Photos
+  source: cloud/Photos
+-
+  target: bin
+  source: cloud/bin
+-
+  target: cloud
+  source: Library/Mobile Documents/com~apple~CloudDocs
+-
+  target: notes
+  source: cloud/notes

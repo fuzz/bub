@@ -1,0 +1,38 @@
+cabal-version:       2.4
+name:                bub
+version:             0.1.0.0
+synopsis:            Tools for Unix systems adminstration
+-- description:
+homepage:            https://github.com/fuzz/beelzebub
+-- bug-reports:
+license:             BSD-3-Clause
+license-file:        LICENSE
+author:              Fuzz Leonard
+maintainer:          fuzz@kt-22.com
+-- copyright:
+category:            System
+extra-source-files:
+    CHANGELOG.markdown
+  , README.markdown
+  , examples/macos.bub
+
+--library
+  -- exposed-modules:
+  -- other-modules:
+  -- other-extensions:
+  -- build-depends:       base ^>=4.12.0.0
+  -- hs-source-dirs:      src
+  -- default-language:    Haskell2010
+
+executable bub
+  main-is:             Main.hs
+  -- other-modules:
+  other-extensions: DeriveGeneric
+  build-depends:
+      base ^>=4.12.0.0
+    , directory ^>=1.3.3.0
+    , symbolic-link ^>=0.1.0.2
+    , unix ^>=2.7.2.2
+    , yaml^>=0.11.1.0
+  hs-source-dirs:      src
+  default-language:    Haskell2010
