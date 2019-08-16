@@ -10,3 +10,6 @@ reads in a sequence of source/target mappings from a YAML file
 in `.pao` and attempts to create them. If the target exists
 and is a symbolic link it will be removed and replaced, otherwise
 `pao` will refuse to clobber it.
+
+An example `.pao` file for macOS and easily tweakable for other operating
+systems is located in `examples/macos.pao`.
