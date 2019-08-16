@@ -26,7 +26,7 @@ main = do
   d <- decodeFileEither ".pao" :: IO (Either ParseException [LinkPair])
 
   case d of
-    Left e -> putStrLn $ (show e) ++ "pao: Config file error--malformed YAML?"
+    Left e -> putStrLn $ (show e) ++ "\npao: Who can clear muddy water? Stillness will accomplish this."
     Right lps -> do
       sequence $ [makeLink lp | lp <- lps]
       putStrLn "pao: Clay is shapen to make vessels; but the contained space is what is useful."

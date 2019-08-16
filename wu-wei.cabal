@@ -1,8 +1,10 @@
 cabal-version:       2.4
 name:                wu-wei
 version:             0.1.0.0
-synopsis:            Minimalist tool for Unix systems adminstration
--- description:
+synopsis:            Unimportant Unix adminstration tool
+description:
+  Minimalist tool for Unix systems administration that strives to be
+  unimportant and do nothing, like water.
 homepage:            https://github.com/fuzz/wu-wei
 -- bug-reports:
 license:             BSD-3-Clause
@@ -16,17 +18,17 @@ extra-source-files:
   , README.markdown
   , examples/macos.pao
 
---library
-  -- exposed-modules:
-  -- other-modules:
-  -- other-extensions:
-  -- build-depends:       base ^>=4.12.0.0
-  -- hs-source-dirs:      src
-  -- default-language:    Haskell2010
+source-repository head
+  type: git
+  location: git@github.com:fuzz/wu-wei.git
+
+source-repository this
+  type: git
+  location: git@github.com:fuzz/wu-wei.git
+  tag: 0.1.0.0
 
 executable pao
   main-is:             Main.hs
-  -- other-modules:
   other-extensions: DeriveGeneric
   build-depends:
       base ^>=4.12.0.0
