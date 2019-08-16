@@ -1,6 +1,6 @@
 cabal-version:       2.4
 name:                wu-wei
-version:             0.1.0.0
+version:             0.1.0.1
 synopsis:            Unimportant Unix adminstration tool
 description:
   Minimalist tool for Unix systems administration that strives to be
@@ -25,7 +25,7 @@ source-repository head
 source-repository this
   type: git
   location: git@github.com:fuzz/wu-wei.git
-  tag: 0.1.0.0
+  tag: 0.1.0.1
 
 executable pao
   main-is:             Main.hs
