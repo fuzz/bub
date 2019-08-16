@@ -20,36 +20,36 @@ import System.Posix.Files   ( FileStatus
 import System.SymbolicLink  ( filePathExist )
 
 main = do
-    h <- getHomeDirectory
-    setCurrentDirectory h
+  h <- getHomeDirectory
+  setCurrentDirectory h
 
-    d <- decodeFileEither ".pao" :: IO (Either ParseException [LinkPair])
+  d <- decodeFileEither ".pao" :: IO (Either ParseException [LinkPair])
 
-    case d of
-        Left e -> putStrLn $ (show e) ++ "pao: Config file error--malformed YAML?"
-        Right lps -> do
-            sequence $ [makeLink lp | lp <- lps]
-            putStrLn "pao: You have been LINKED!"
+  case d of
+    Left e -> putStrLn $ (show e) ++ "pao: Config file error--malformed YAML?"
+    Right lps -> do
+      sequence $ [makeLink lp | lp <- lps]
+      putStrLn "pao: Clay is shapen to make vessels; but the contained space is what is useful."
 
 makeLink :: LinkPair -> IO ()
 makeLink lp = do
   x <- filePathExist $ target lp
   if x
-      then clobberIfSymbolicLink lp
-      else createSymbolicLink (source lp) (target lp)
+    then clobberIfSymbolicLink lp
+    else createSymbolicLink (source lp) (target lp)
 
 clobberIfSymbolicLink :: LinkPair -> IO ()
 clobberIfSymbolicLink lp = do
-    s <- getSymbolicLinkStatus $ target lp
-    if isSymbolicLink s
-        then do
-            removeLink $ target lp
-            createSymbolicLink (source lp) (target lp)
-        else putStrLn $ "pao: Refusing to clobber non-symlink " ++ target lp
+  s <- getSymbolicLinkStatus $ target lp
+  if isSymbolicLink s
+    then do
+      removeLink $ target lp
+      createSymbolicLink (source lp) (target lp)
+    else putStrLn $ "pao: Non-symlink endangers the house of " ++ target lp
 
 data LinkPair = LinkPair {
-      source :: FilePath
-    , target :: FilePath
+    source :: FilePath
+  , target :: FilePath
 } deriving (Generic, Show)
 
 instance FromJSON LinkPair
