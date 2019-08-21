@@ -1,0 +1,18 @@
+-
+  target: /etc/aliases
+  source: /usr/local/s/etc/aliases
+-
+  target: /etc/pf.conf
+  source: /usr/local/s/etc/pf.conf
+-
+  target: /etc/rc.conf
+  source: /usr/local/s/etc/rc.conf
+-
+  target: /etc/ssh/sshd_config
+  source: /usr/local/s/etc/ssh/sshd_config
+-
+  target: /usr/local/etc/nginx/nginx.conf
+  source: /usr/local/s/etc/nginx/nginx.conf
+-
+  target: /var/db/pkg
+  source: /usr/local/s/var/db/pkg
