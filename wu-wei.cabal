@@ -1,6 +1,6 @@
 cabal-version:       2.4
 name:                wu-wei
-version:             0.1.0.3
+version:             0.2.0.0
 synopsis:            Unambitious Unix adminstration tool
 description:
   Minimalist tool for Unix systems administration that strives to be
@@ -16,7 +16,8 @@ category:            System
 extra-source-files:
     CHANGELOG.markdown
   , README.markdown
-  , examples/macos.pao
+  , examples/freebsd.ww
+  , examples/macos.ww
 
 source-repository head
   type: git
@@ -25,9 +26,9 @@ source-repository head
 source-repository this
   type: git
   location: git@github.com:fuzz/wu-wei.git
-  tag: 0.1.0.3
+  tag: 0.2.0.0
 
-executable pao
+executable ww
   main-is:             Main.hs
   other-extensions: DeriveGeneric
   build-depends:
