@@ -1,0 +1,17 @@
+.\" Manpage for ww.
+.\" Contact fuzz@kt-22.com to correct errors or typos.
+.TH man 8 "28 Aug 2019" "0.2.0.0" "ww man page"
+.SH NAME
+ww \- manage maps of symbolic links
+.SH SYNOPSIS
+ww [COMMAND]
+.SH DESCRIPTION
+ww manages maps of symbolic links.
+.SH OPTIONS
+install, update
+.SH SEE ALSO
+symlink(2)
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+Fuzz Leonard (fuzz@kt-22.com)
