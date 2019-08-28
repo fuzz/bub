@@ -1,15 +1,14 @@
 # Wu wei
 
-Wu wei provides systems administration tools targeted at BSD Unices
-such as FreeBSD and macOS. The intent of these tools are to rely
-heavily upon the correctness of Unix, such as respecting hier(7),
-and thus are not expected to work on typical Linux distribitions.
+Wu wei provides systems administration tools targeted at Unices that comply
+with [Recommendations for Safety and Composability in Operating Systems](https://github.com/fuzz/rescos).
+macOS and BSD Unices comply out of the box; more effort is required for Linux.
+The status of Windows and other operating systems is not known at this time.
 
-Currently the executable `pao` changes to the user's home directory,
+Currently the executable `ww` changes to the user's home directory,
 reads in a sequence of source/target mappings from a YAML file
-in `.pao` and attempts to create them. If the target exists
+in `.ww` and attempts to create them. If the target exists
 and is a symbolic link it will be removed and replaced, otherwise
-`pao` will refuse to clobber it.
+`ww` will refuse to clobber it.
 
-An example `.pao` file for macOS and easily tweakable for other operating
-systems is located in `examples/macos.pao`.
+Example `.ww` files for macOS and FreeBSD are located in `examples/`.

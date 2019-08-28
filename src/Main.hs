@@ -23,13 +23,13 @@ main = do
   h <- getHomeDirectory
   setCurrentDirectory h
 
-  d <- decodeFileEither ".pao" :: IO (Either ParseException [LinkPair])
+  d <- decodeFileEither ".ww" :: IO (Either ParseException [LinkPair])
 
   case d of
-    Left e -> putStrLn $ (show e) ++ "\npao: Who can clear muddy water? Stillness will accomplish this."
+    Left e -> putStrLn $ (show e) ++ "\nwu-wei: Who can clear muddy water? Stillness will accomplish this."
     Right lps -> do
       sequence $ [makeLink lp | lp <- lps]
-      putStrLn "pao: Clay is shapen to make vessels; but the contained space is what is useful."
+      putStrLn "wu-wei: Clay is shapen to make vessels; the contained space is what is useful."
 
 makeLink :: LinkPair -> IO ()
 makeLink lp = do
@@ -45,7 +45,7 @@ clobberIfSymbolicLink lp = do
     then do
       removeLink $ target lp
       createSymbolicLink (source lp) (target lp)
-    else putStrLn $ "pao: Non-symlink endangers the house of " ++ target lp
+    else putStrLn $ "wu-wei: Non-symlink endangers the house of " ++ target lp
 
 data LinkPair = LinkPair {
     source :: FilePath
