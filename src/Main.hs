@@ -17,6 +17,8 @@ import System.Posix.Files   ( FileStatus
                             , isSymbolicLink
                             , removeLink
                             )
+import System.Environment
+import System.Exit
 import System.SymbolicLink  ( filePathExist )
 
 main = do
